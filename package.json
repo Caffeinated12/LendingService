@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "name": "lendingservice",
+  "version": "1.0.0",
+  "description": "website for lending services",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "morgan": "^1.10.0"
+  }
+}
