@@ -5,7 +5,9 @@ const app = express();
 const PORT = 3000;
 
 app.set('view engine', 'ejs');
-app.set('views', 'webpages')
+app.set('views', 'webpages/user');
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true}))
 app.use(morgan('tiny'));
 
 
@@ -15,5 +17,5 @@ app.listen(PORT, function(err){
 
 app.get('/', (req,res) => {
     console.log(req);
-    res.render('user/login')
+    res.render('login')
 })

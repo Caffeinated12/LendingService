@@ -1,0 +1,57 @@
+*{
+    margin: 0px
+}
+
+.Login.User{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 7vh auto;
+}
+
+.Login.User nav{
+    height: 7vh;
+    display: grid;
+    align-items: center;
+    background-color: aqua;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    grid-template-columns: 90vw 10vw;
+    box-shadow: rgba(1, 15, 53, 0.35) 0px 5px 5px;}
+
+.navBar p{
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+
+
+.Box{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: aqua;
+    border-radius: 25px;
+    place-self: center;
+    transform: translate(0px, -7vh);
+    box-shadow: rgba(1, 15, 53, 0.35) 0px 5px 5px;
+}
+
+.Box p:nth-child(1){
+    width:100%;
+    padding-left: 100px;
+}
+.Box p{
+    margin:10px;
+    margin-left: 20px;
+}
+.Box input{
+    height: 20px;
+    margin-top: 5px
+}
+.Box button{ 
+    height: 25px;
+    margin: 0px 20px;
+}
