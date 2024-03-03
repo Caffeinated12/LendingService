@@ -39,19 +39,29 @@
     box-shadow: rgba(1, 15, 53, 0.35) 0px 5px 5px;
 }
 
-.Box p:nth-child(1){
+.Box form p:nth-child(1){
     width:100%;
     padding-left: 100px;
 }
-.Box p{
-    margin:10px;
+.Box form p{
+    margin:8px;
     margin-left: 20px;
 }
-.Box input{
+.Box form input{
     height: 20px;
-    margin-top: 5px
+    margin-top: 5px;
+    margin-left: 20px;
 }
-.Box button{ 
+.Box form button{ 
     height: 25px;
-    margin: 0px 20px;
+    margin: 10px 20px;
+}
+
+.Box form:nth-child(2){
+    height: 0px;
+    width: 0px;
+}
+.Box form:nth-child(1){
+    height: 300px;
+    width: 300px;
 }
