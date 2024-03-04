@@ -19,12 +19,12 @@ app.listen(PORT, function(err){
     console.log("listening at port ", PORT)})
 
 app.get('/', (req,res) => {
-    res.render('user/login')
+    res.render('user/login', {title: "Login | Register"})
 
 })
 
 app.get('/admin', (req, res) => {
-    res.render('admin/login')
+    res.render('admin/login', {title: "For Administrator"})
 })
 
 app.post('/', (req, res) => {
@@ -44,5 +44,5 @@ app.post('/admin', (req,res)=>{
 })
 
 app.get('/admin/main', (req,res) => {
-    res.render('admin/Lenderpage')
+    res.render('admin/Lenderpage',{title: "Administrator"})
 })

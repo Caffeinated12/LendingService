@@ -1,31 +1,104 @@
+.raleway-font {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
 *{
     margin: 0px;    
+}
+
+[data-theme="light"]{
+    --background1:#FFFFE7;
+    --background2:#9AAAAA;
+}
+
+body{
+    background-color: var(--background1);
 }
 
 /* Navigation Bar */
 nav{
     height: 7vh;
     width: 100vw;
-    background-color: aqua;
 }
 
 nav ul{     
     display: flex;
     height: 100%;
     align-items: center;
-    list-style-type: none;
+    list-style-type: none; 
+    font-family: 'Raleway';
+    background-color: var(--background2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-nav ul li:nth-child(1){
+nav ul li:first-child{
     margin-right: auto;
+    text-wrap: nowrap;
+    text-align: center;
+    text-justify: center;
+    font-family: 'Raleway';
+    font-size: 49px;
+    font-weight: 450;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Raleway'
 }
 
 nav ul li:not(:nth-child(1)){
     float: right;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
     margin: 10px;
-    padding: 10px
+    text-wrap: nowrap;
 }
 
+nav ul li:last-child{
+    width: 80px;
+    height: 34px;
+    text-align: start;
+}
+
+/* Theme switch */
+.swtich{
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.themeMode{
+    opacity:0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    height: 34px;
+    width: 60px;
+    border-radius: 2rem;
+    background-color: #495B5B;
+}
+.slider:before{
+    position: absolute;
+    content: " ";
+    height: 26px;
+    width: 26px;
+    background-color: white;
+    border-radius: 2rem;
+    bottom: 4px;
+    left:4px;
+}
 
 
 /* Login Box */
@@ -35,9 +108,15 @@ nav ul li:not(:nth-child(1)){
     position: absolute;
     top:40%;
     left:50%;
-    background-color: aqua;
+    background-color: var(--background2);
     transform: translate(-50%, -40%);
     border-radius: 10px;
+    font-family: "Raleway";
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+     rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+       rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .loginBox form:nth-child(1){

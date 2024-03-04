@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/Userstyles.css">
-    <title>Login User</title>
-</head>
+<html lang="en" data-theme="light">
+    
+<%- include('./partials/header.ejs') %> 
+
 <body class="Login User">
     <nav>
-        <div class=navBar>
-            <p>Reservation Services</p>
-        </div>
+        <ul>
+            <li><a href="">Reserve.Me</a></li>
+            <li></li>
+        </ul>
     </nav>
-    <div class="Login Box">
-        <form action="/" method="POST">
+    <div class="loginBox">
+        <form action="/" method="POST" id="form1">
             <p>Login</p>
-            <br>
-            <p>Username</p>
-            <input type="email" id="UsernameForm" name="Username"required>
-            <br>
+            <p>Email</p>
+            <input type="email" name="userName" required>
             <p>Password</p>
-            <input type="password" id="UserPasswordForm"  name="userPassword" required>
-            <br>
-            <Button id="LoginButton">Login</Button>
-            <Button id="SignupButton" form="form2">Signup</Button>
+            <input type="password" name="userPassword" required>
+            <button form="form1">Login</button>
+            <button form="form2">Register</button>
         </form>
-        <form action="/register" method='Get' id="form2">
-        </form>
+        <form action="/admin/register" method="GET" id="form2"></form>
     </div>
     
 </body>
