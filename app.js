@@ -30,5 +30,19 @@ app.get('/admin', (req, res) => {
 app.post('/', (req, res) => {
     const username = req.body.Username;
     const password = req.body.password;
-    res.render('main')
+    res.redirect('/main')
+})
+
+app.get('/main', (req, res) => {
+    res.render('user/main', {title: 'home'})
+})
+
+app.post('/admin', (req,res)=>{
+    const adminName = req.body.adminName
+    const adminPassword = req.body.adminPassword
+    res.redirect('/admin/main')
+})
+
+app.get('/admin/main', (req,res) => {
+    res.render('admin/Lenderpage')
 })

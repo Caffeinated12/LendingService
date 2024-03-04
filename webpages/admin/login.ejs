@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/Userstyles.css">
+    <link rel="stylesheet" href="adminStyles.css">
     <title>Login User</title>
 </head>
-<body class="Login User">
+<body>
     <nav>
-        <div class=navBar>
-            <p>Reservation Services</p>
-        </div>
+        <ul>
+            <li><a href="">Reservation Site</a></li>
+        </ul>
     </nav>
-    <div class="Login Box">
-        <form action="/" method="POST">
+    <div class="loginBox">
+        <form action="/admin" method="POST" id="form1">
             <p>Login as Admin</p>
-            <br>
-            <p>Username</p>
-            <input type="text" id="UsernameForm" name="Username"required>
-            <br>
+            <p>Admin</p>
+            <input type="email" name="adminName" required>
             <p>Password</p>
-            <input type="text" id="UserPasswordForm" name="userPassword" required>
-            <br>
-            <Button id="LoginButton">Login</Button>
-            <Button id="SignupButton" form="form2">Signup</Button>
+            <input type="password" name="adminPassword" required>
+            <button form="form1">Login</button>
+            <button form="form2">Register</button>
         </form>
-        <form action="/register" method='Get' id="form2">
-        </form>
+        <form action="/admin/register" method="GET" id="form2"></form>
     </div>
-    
 </body>
 </html>

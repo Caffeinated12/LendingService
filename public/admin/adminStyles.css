@@ -1,0 +1,79 @@
+*{
+    margin: 0px;    
+}
+
+/* Navigation Bar */
+nav{
+    height: 7vh;
+    width: 100vw;
+    background-color: aqua;
+}
+
+nav ul{     
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav ul li:nth-child(1){
+    margin-right: auto;
+}
+
+nav ul li:not(:nth-child(1)){
+    float: right;
+    margin: 10px;
+    padding: 10px
+}
+
+
+
+/* Login Box */
+.loginBox{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top:40%;
+    left:50%;
+    background-color: aqua;
+    transform: translate(-50%, -40%);
+    border-radius: 10px;
+}
+
+.loginBox form:nth-child(1){
+    height:100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto min-content auto min-content auto auto auto;
+    align-items: center;
+}
+
+.loginBox form:nth-child(2){
+    height: 0px;
+    width: 0px;
+}
+
+.loginBox form input{
+    height: 50%;
+    width: 80%;
+    justify-self: center;
+    border-radius: 3px;
+    border: none;
+}
+
+.loginBox form button{
+    height: 50%;
+    width: 50%;
+    margin-left: 27px;
+    align-self: flex-start;
+}
+
+.loginBox form p:not(:nth-child(1)){
+    margin-left: 27px;
+}
+
+.loginBox form p:first-child{
+    align-items: center;
+    justify-self: center;
+}
+

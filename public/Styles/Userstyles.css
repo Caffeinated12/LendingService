@@ -24,6 +24,38 @@
     font-size: 2rem;
 }
 
+nav{
+    height: 7vh;
+    background-color: aqua  ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+nav ul li:not(:nth-child(1)){
+    margin: 10px;
+    padding: 10px;
+    float: right;
+    justify-self: end;
+}
+
+nav ul li:nth-child(1){
+    margin-right: auto;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 
 
 .Box{
@@ -49,19 +81,23 @@
 }
 .Box form input{
     height: 20px;
+    width: 80%;
     margin-top: 5px;
     margin-left: 20px;
 }
+
+
 .Box form button{ 
     height: 25px;
     margin: 10px 20px;
 }
 
-.Box form:nth-child(2){
-    height: 0px;
-    width: 0px;
-}
 .Box form:nth-child(1){
     height: 300px;
     width: 300px;
+    flex-wrap: nowrap;
+}
+.Box form:nth-child(2){
+    height: 0px;
+    width: 0px;
 }
