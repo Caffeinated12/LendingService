@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="Main">
+        <p>Items Available for Borrowing</p>
+        <%  filteredObjects = object.filter(isItem => isItem.item)%>
+        <% if(filteredObjects.length > 0){ %>
+            <% for(let i=0; i < filteredObjects.length; i++) { %>
+                <a class="barCard">
+                    <div class="bars">
+                            <img href="" width="100px" height="100px">
+                            <p><%= filteredObjects[i].data['item-name']%></p>
+                            <p><%= filteredObjects[i].data['item-description']%></p>
+                            <button>Remove</button>
+                    </div>
+                </a>
+
+            <%}%>
+
+        <% } else { %>
+            
+            <div class="">All items are borrowed</div>
+
+        <% } %>
+    </div>
+</body>
+</html>

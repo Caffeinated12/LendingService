@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<%- include('./partials/header.ejs')%>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <div class="Main">
+        <% let isBorrowedObject = object.filter(br => br.data.isborrowed) %>
+        <% if(isBorrowedObject.length > 0){ %>
+            <% for(let i=0; i < isBorrowedObject.length; i++ ) {%>
+                <a class="current">
+                    <img height="200px" width="200px">
+                    <div class="item">
+                        <p>Borrower Name</p>
+                        <p><%= object[Number(isBorrowedObject[i].data.borrowedBy)-1].data.fname %> 
+                            <%= object[Number(isBorrowedObject[i].data.borrowedBy)-1].data.lname %></p>
+                        
+                    </div>
+                </a> 
+            <% } %>
+        <% } %>
+    </div>
+</body>
+</html>

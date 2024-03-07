@@ -22,6 +22,7 @@ body{
 nav{
     height: 7vh;
     width: 100vw;
+    text-wrap: nowrap;
 }
 
 nav ul{     
@@ -57,7 +58,6 @@ nav ul li:not(:nth-child(1)){
     width: 120px;
     padding: 10px;
     margin: 10px;
-    text-wrap: nowrap;
 }
 
 nav ul li:last-child{
@@ -88,6 +88,9 @@ nav ul li:last-child{
     width: 60px;
     border-radius: 2rem;
     background-color: #495B5B;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
 }
 .slider:before{
     position: absolute;
@@ -98,9 +101,14 @@ nav ul li:last-child{
     border-radius: 2rem;
     bottom: 4px;
     left:4px;
+    transition: ease-in .2s;
+
 }
 
-
+.themeMode:checked + .slider:before{
+    transform: translateX(26px);
+    transition: ease-in .2s;
+}
 /* Login Box */
 .loginBox{
     height: 300px;
@@ -156,3 +164,104 @@ nav ul li:last-child{
     justify-self: center;
 }
 
+.Body{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.Main{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Main p{
+    font-family: "Raleway";
+    font-size: 24px;
+    margin:10px;
+}
+
+.Main>div{
+    background-color: beige;
+    border-radius: 10px;
+    margin:10px;
+    height:500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Add form{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+
+}
+
+.Add form p{
+    font-size: 24px;
+    text-align: center;
+    margin: 20px
+}
+
+.Add input{
+    height: 20px;
+    width:  80%;
+    justify-self: center;
+}
+
+.Add {
+    height: 200px
+}
+
+.Add button{
+    width: 100px;
+    margin: 30px;
+    margin-left: 49px
+}
+
+.Main .barCard{
+        width: 80vw;
+        height: 150px;
+        align-items: center;
+        display: flex;
+        border-radius: 20px;
+        background-color: beige;
+        margin:10px 20px;
+}
+
+.bars{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content 300px auto 100px;
+    align-items: center;
+    margin: 10px 40px;
+}
+
+.bars>p:nth-child(3){
+    font-size: 15px;
+
+}
+
+.Main .current{
+    height:400px;
+    width: 80vw;
+    background-color: beige;
+    margin: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: max-content auto auto auto;
+    grid-template-rows: auto max-content auto  ;
+}
+
+.current img{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 20px;
+}
+
+.current .item{
+    grid-row: 1/4;
+    grid-column: 2/3;
+}

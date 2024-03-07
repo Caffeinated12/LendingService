@@ -1,10 +1,23 @@
+const database = require('./db.json')
 const express = require("express")
 const morgan = require("morgan")
+const multer = require("multer")
+const path = require('path')
 //initiate express app
 const app = express();
 const PORT = 3000;
 
+const storage = multer.diskStorage({
+    destination:(req, file, cb) =>  {
+         cb(null, "imaged")
+    },
+    filename: (req, file, cb) => {
+        console.log(file)
+        cb(null, Date.now()+path.extname(file.originalname))
+    }   
+})
 
+const upload = multer({storage: storage})
 
 app.set('view engine', 'ejs');
 app.set('views', 'webpages');
@@ -44,5 +57,21 @@ app.post('/admin', (req,res)=>{
 })
 
 app.get('/admin/main', (req,res) => {
-    res.render('admin/Lenderpage',{title: "Administrator"})
+    res.render  ('admin/Lenderpage',{object: database, title:"Admin"})
 })
+
+app.get('/admin/add', (req,res) => {
+    res.render('admin/Add', {title: "Admin | Add Item"})
+})
+
+app.post('/admin/add', upload.single("images"), (req,res) => {
+    res.send(req.body.ItemName)
+})
+
+app.get('/admin/available', (req, res) => {
+    res.render('admin/available', {object: database,title:"Admin | Availabe Items"})
+})
+
+app.get('/admin/current', (req,res)=>{
+    res.render('admin/current', {object: database, title: "Admin | Current"})
+}) 

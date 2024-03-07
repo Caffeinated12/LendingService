@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <div class="Main">
+        <p>Add Item</p>
+        <div class="Add">
+            <form action="/admin/add" method="POST" enctype="multipart/form-data">
+                <p>Item Name:</p>
+                <input type="text" name="ItemName" required>
+                <p>Attach Image</p>
+                
+                <input type="file" accept="image/png, image/jpeg" name="images">
+
+                <input type="text" name="itemDescription" required>
+                <button>Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

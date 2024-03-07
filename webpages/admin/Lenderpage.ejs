@@ -3,7 +3,22 @@
 <%- include('./partials/header.ejs') %>
 <body>
     <%- include('./partials/nav') %>
-    <div class="Main">
-    </div> 
+    <div class="Body">
+        <div class="Main">
+            <p>Items</p>
+            <% filteredObjects = object.filter(isItem => isItem.item) %>      
+            <% if (filteredObjects.length > 0) { %>
+                <% for(let i = 0; i < filteredObjects.length; i++) {%>
+                    <div>
+                        <p><%= filteredObjects[i].data['item-name'] %></p>
+                            <img href="/<%= filteredObjects[i].data['item-images']%>">
+                        <p><%= filteredObjects[i].data['item-description'] %></p>
+                    </div>
+                <%}%>
+            <% }  else { %>
+                <p> hmm... empty</p>
+            <% } %>
+        </div>
+    </div>
 </body>
 </html>

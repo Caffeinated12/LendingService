@@ -1,0 +1,86 @@
+[
+{
+    "id":1,
+    "item": true,
+    "user":false,
+    "admin":false,
+    "data":{
+        "item-name":"calculator",
+        "item-description": "fx250",
+        "item-comments": "fake",
+        "item-images":"/adsfad",
+        "isborrowed":false,
+        "returnBy": null,
+        "borrowedBy": null,        
+        "last-borrrowed":[{
+            "name":"charles",
+            "borrowed-date":"yesterday",
+            "returned-date":"now",
+            "comments":"no defects"
+        }]
+    },
+    "date-created":"something",
+    "date-updated": "something"
+},
+
+{
+    "id":2,
+    "item": true,
+    "user": false,
+    "admin":false,
+    "data":{
+        "item-name":"inator",
+        "item-description": "fx350",
+        "item-comments": "real",
+        "item-images":"./adsfad",
+        "isborrowed": true,
+        "returnBy": "date",
+        "borrowedBy": "4",  
+        "last-borrrowed":[{
+            "name":"charles",
+            "borrowed-date":"june122004",
+            "returned-date":"yesterday",
+            "comments":"no defects"
+        }]
+    },
+    "date-created":"something",
+    "date-updated": "something"},
+   
+{
+    "id":3,
+    "item": true,
+    "user": false,
+    "admin":false,
+    "data":{
+        "item-name":"doofinator ",
+        "item-description": "inasal",
+        "item-comments": "real",
+        "item-images":"./adsfad",
+        "isborrowed": true,
+        "returnBy": "date",
+        "borrowedBy": "4",  
+        "last-borrrowed":[{
+            "name":"charles",
+            "borrowed-date":"june122004",
+            "returned-date":"yesterday",
+            "comments":"no defects"}]
+    },
+    "date-created":"something",
+    "date-updated": "something"},
+
+
+    {
+        "id": 4,
+        "item": false,
+        "user": true,
+        "admin": false,
+        "data":{
+            "username":"caffe",
+            "password":123,
+            "fname":"charles",
+            "lname":"ditching",
+            "items-return-date": "tomorrow",
+            "score": 1
+        }
+    }
+]  
